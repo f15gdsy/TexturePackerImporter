@@ -1,0 +1,5 @@
+*.meta
+
+
+# Mac
+.DS_Store
