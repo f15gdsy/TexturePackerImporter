@@ -1,3 +1,8 @@
+This code is based on the great share: http://forum.unity3d.com/threads/217408-TexturePacker-to-Sprite
+
+And I added the TexturePivotParser, which is a complement of the library, as the TexuturePacker does not support the pivot setting in Unity3d 4.3.
+It can be convenient if you need to set some of your frames in the sprite sheet a different pivot point.
+
 
 There is a tutorial for this plugin here:
 http://www.youtube.com/watch?v=CHQmvC1pqaY
@@ -20,9 +25,6 @@ Unity process:
 		Assets/MySprite/MySprite.png
 		
 	
-The TexturePivotParser is added by Yifeng, contact: f15gdsy@gmail.com
-It's convenient when you need to set some (or all) of the frames in your sprite sheet a different pivot point,
- as TexturePacker doesn't provide that.
 
 TexturePivotParser:
 	Create a text file in json format containing the pivot data for the frames (name does not matter).
@@ -52,6 +54,7 @@ TexturePivotParser:
 			
 
 	
+
 Shaders:
 	Transparent Unlit - 
 		The default shader for all imported sprite sheets.
