@@ -226,6 +226,8 @@ public class TexturePacker{
 			frames.Add(new PackedFrame((string)entry.Key, meta.size, (Hashtable)entry.Value));
 		}
 
+		SortFrames(frames);
+
 		List<SpriteMetaData> sprites = new List<SpriteMetaData>();
 		for(int i = 0; i < frames.Count; i++){
 			SpriteMetaData smd = frames[i].BuildBasicSprite( 0.01f, new Color32(128,128,128,128));
@@ -235,6 +237,19 @@ public class TexturePacker{
 
 		return sprites;
 
+	}
+
+	private static List<PackedFrame> SortFrames (List<PackedFrame> frames) {
+		for (int i=frames.Count-1; i>0; i--) {
+			for (int j=0; j<i; j++) {
+				if (string.Compare(frames[j+1].name, frames[j].name) < 0) {
+					PackedFrame temp = frames[j+1];
+					frames[j+1] = frames[j];
+					frames[j] = temp;
+				}
+			}
+		}
+		return frames;
 	}
 	
 	public static Mesh[] ProcessToMeshes(string text){
