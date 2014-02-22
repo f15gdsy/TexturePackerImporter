@@ -3,6 +3,8 @@ This code is based on the great share: http://forum.unity3d.com/threads/217408-T
 And I added the TexturePivotParser, which is a complement of the library, as the TexuturePacker does not support the pivot setting in Unity3d 4.3.
 It can be convenient if you need to set some of your frames in the sprite sheet a different pivot point.
 
+One thing to note is that, if you updates the sprite sheet quite often, you can add a prefix to the sprites, like "000001_", which will help keep your sprites sorted in order in Unity, as Unity sort the sprites in side a sprite sheet based on the alphabetic order.
+
 
 There is a tutorial for this plugin here:
 http://www.youtube.com/watch?v=CHQmvC1pqaY
